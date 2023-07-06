@@ -23,6 +23,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+
+/**
+ This program is designed to read information from CSV files and store it in a database.
+ It then proceeds to process the data in order to generate invoices for each user.
+ This task is part of the curriculum in the Methodia Java Academy training program.
+ */
+
 @SpringBootApplication
 @EnableJpaRepositories(basePackages = "org.example.repository")
 public class Main {
@@ -40,8 +47,8 @@ public class Main {
 
 
         return args -> {
-            String inputDir = "C:\\Users\\ivani\\Desktop\\methodia\\MiniBilling\\src\\main\\resources";
-            String outputDir = "C:\\Users\\ivani\\Desktop\\outputdir";
+            String inputDir = "C:\\Users\\ivani\\Desktop\\methodia\\MiniBilling\\src\\main\\resources"; //enter your input dir its location of csv files
+            String outputDir = "C:\\Users\\ivani\\Desktop\\outputdir"; //enter output dir
 
             userRepository.deleteAllInBatch();
             readingRepository.deleteAllInBatch();
